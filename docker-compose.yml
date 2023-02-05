@@ -9,7 +9,8 @@ services:
       - ./src:/data # ./srcディレクトリをappのコンテナ内/dataへマウント
 
   web:
-    image: nginx:1.20-alpine # nginxは偶数が安定ver.
+    # image: nginx:1.20-alpine # nginxは偶数が安定ver.
+    image: nginx:1.22-alpine
     ports:
       - 8080:80 # ホスト側:コンテナ側
     volumes:
