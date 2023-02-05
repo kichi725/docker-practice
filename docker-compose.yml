@@ -1,0 +1,9 @@
+version: '3.9' # ファイルのバージョン
+
+services:
+  app: # サービス名は任意
+    build: ./docker/php
+    # ↑ビルドコンテキストを指定 → docker buildを実行する際の現在の作業ディレクトリのこと
+    # Dockerfileが置かれているディレクトリ
+    volumes:
+      - ./src:/data # ./srcディレクトリをappのコンテナ内/dataへマウント
